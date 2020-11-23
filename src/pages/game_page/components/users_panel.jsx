@@ -1,24 +1,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import {log_out_user} from '../../../redux/UserInfo/UserInfo.actions';
+import styles from './styles/users_panel.module.css';
+import {Link} from 'react-router-dom';
 
 const UsersPanel = (props) => {
   return (
-    <div>
-      <div>how it works</div>
+    
 
-      <div>start and stop buttons</div>
-
-      <div>
-        <div>
-          <span>Nickname: {props.Nickname}</span>
+      
+        <div className={styles.flex_container}>
+          
+          <span>{props.Nickname}</span>
+          <span>Round: {props.game_round}</span>
+          <span>Balance: {props.Balance}</span>
           <span>
-            <button onClick={()=> props.log_out_user()}>Logout</button>
+            <Link to={{pathname:"/"}} onClick={()=> props.log_out_user()}>Logout</Link>
           </span>
-  <span>Balance: {props.Balance}</span>
+  
         </div>
-      </div>
-    </div>
+      
+    
   );
 };
 
@@ -26,7 +28,8 @@ const mapStateToProps = (state) => {
   return {
     ...state,
     Nickname: state.UserInfo.Nickname,
-    Balance:state.UserInfo.Balance
+    Balance:state.UserInfo.Balance,
+    game_round:state.UserInfo.game_round
   };
 };
 

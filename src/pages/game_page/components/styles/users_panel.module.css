@@ -1,0 +1,23 @@
+.flex_container {
+    display: flex;
+    border: 1px solid black;
+    border-right: none;
+    background-color: darkgrey;
+    color:white;
+    
+}
+
+.flex_container > span {
+    display:block;
+    padding: 10px;
+    border-right:1px solid black;
+}
+
+.flex_container a {
+    display:block;
+    background-color: darkgrey;
+    border-color: darkgrey;
+    border:none;
+    color:blue;
+    
+}

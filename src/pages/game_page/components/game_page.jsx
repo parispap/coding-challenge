@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { Component } from "react";
+import UsersPanel from "./users_panel";
+import PlaceBetButton from "./PlaceBetButton";
 import { connect } from "react-redux";
-import UsersPanel from './users_panel';
+import styles from "./styles/game_page.module.css";
+import deck from '../../../assets/images/deck.jpg';
 
+class GamePage extends Component {
+  componentDidUpdate() {
+    sessionStorage.setItem("user_session", JSON.stringify(this.props.UserInfo));
+  }
 
-const game_page =() => {
+  render() {
     return (
-        <div>
-            <div>
-                {/* image */}
-            </div>
+      <div className={styles.container}>
+        <div className={styles.deck_container}><img width="60px" src={deck} alt=""/></div>
 
-            <div>
-                {/* card board */}
-            </div>
+        <div>{/* card board */}</div>
 
-            <div>
-                <UsersPanel/>
-            </div>
+        <div className={styles.user_panel}>
+          <UsersPanel />
         </div>
-        
-    )
+
+        <div className={styles.bet_buttons}>
+          <PlaceBetButton />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default game_page
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+  };
+};
+
+export default connect(mapStateToProps, null)(GamePage);
