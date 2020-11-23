@@ -2,7 +2,8 @@ import { LOG_IN, LOG_OUT, SAVE_USER } from "./UserInfo.types";
 
 const InitialState = {
   isLoggedIn: false,
-  Nickname:""
+  Nickname:"takis",
+  Balance:50000
 };
 
 const reducer = (state = InitialState, action) => {

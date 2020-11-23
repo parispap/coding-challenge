@@ -21,7 +21,8 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        name: state.UserInfo.nickname
+        name: state.UserInfo.nickname,
+        isLoggedIn:state.isLoggedin
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(InputNickname);

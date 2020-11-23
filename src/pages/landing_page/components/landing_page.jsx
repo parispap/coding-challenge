@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import InputNickname from './input_nickname';
 import ButtonStart from './ButtonStart';
 
 
-const LandingPage = () => {
+
+const LandingPage =()=> {
+
+
+
     return(
         <div>
 
@@ -23,4 +27,6 @@ const LandingPage = () => {
     )
 }
 
-export default LandingPage
+  
+
+export default LandingPage;

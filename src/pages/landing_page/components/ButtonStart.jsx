@@ -20,5 +20,12 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        
+        isLoggedIn:state.isLoggedin
+    }
+}
 
-export default connect(null,mapDispatchToProps)(ButtonStart);
+
+export default connect(mapStateToProps,mapDispatchToProps)(ButtonStart);
