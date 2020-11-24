@@ -4,6 +4,8 @@ import PlaceBetButton from "./PlaceBetButton";
 import { connect } from "react-redux";
 import styles from "./styles/game_page.module.css";
 import deck from '../../../assets/images/deck.jpg';
+import RoundStats from './round_stats';
+import GameBoard from './game_board';
 
 class GamePage extends Component {
   componentDidUpdate() {
@@ -15,8 +17,11 @@ class GamePage extends Component {
       <div className={styles.container}>
         <div className={styles.deck_container}><img width="60px" src={deck} alt=""/></div>
 
-        <div>{/* card board */}</div>
+        <div><GameBoard/></div>
 
+        <div className={styles.round_stats}>
+          <RoundStats/>
+        </div>
         <div className={styles.user_panel}>
           <UsersPanel />
         </div>

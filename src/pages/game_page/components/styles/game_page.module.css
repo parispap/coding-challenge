@@ -37,3 +37,10 @@
     right: 100px;
 
 }
+
+.round_stats {
+    position: absolute;
+    right:0px;
+    bottom: 80px;
+    padding: 20px;
+}

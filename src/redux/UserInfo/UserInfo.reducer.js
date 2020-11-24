@@ -6,6 +6,8 @@ const InitialState = {
   isLoggedIn:false,
   fixed_bet:2500,
   game_round:0,
+  winning_pool:0,
+  
 
 };
 
@@ -62,6 +64,8 @@ const reducer = (state = InitialState, action) => {
       };
 
       case START_NEW_ROUND:
+
+      document.querySelector("#start_game_button").disabled=true;
         return {
           ...state,
           Balance:state.Balance-state.fixed_bet,

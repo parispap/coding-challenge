@@ -7,8 +7,8 @@ const PlaceBetButton = (props) => {
     <div>
       
 
-      <button onClick={()=>props.start_new_round()}>
-        Start Game
+      <button id="start_game_button" onClick={()=>props.start_new_round()}>
+        Place your Bet to Start<br/>{`€${props.fixed_bet}`}
       </button>
     </div>
   );
@@ -18,7 +18,8 @@ const PlaceBetButton = (props) => {
 const mapStateToProps = (state) => {
     return {
         ...state,
-        game_round:state.UserInfo.game_round
+        game_round:state.UserInfo.game_round,
+        fixed_bet:state.UserInfo.fixed_bet
     };
 };
 
