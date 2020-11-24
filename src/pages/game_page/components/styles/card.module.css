@@ -2,14 +2,17 @@
     width: 200px;
     height: 300px;
     perspective: 800px;
+    
+
 }
 
 .inner_container {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
+    transition: transform ;
     transform-style: preserve-3d;
+    
     
     
 }
@@ -19,18 +22,34 @@
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    
 }
+
 .card_front {
-    background:red;
-    transform: rotateY(180deg);
+   
+    
 
 }
 
 .card_back {
-    
+    transform: rotateY(180deg);
     background:url('../../../../assets/images/card.jpg')
 }
 
 .is_flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) ;
+
+    
   }
+
+  .shuffled {
+      animation: shuffle_cards  ease;
+  }
+
+  @keyframes shuffle_cards {
+      0% {position: relative;pointer-events: none;}
+      25% {position: absolute;}
+      75% {position: relative;}
+      100% {position: absolute;pointer-events: unset;}
+  }
+

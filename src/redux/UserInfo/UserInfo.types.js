@@ -12,3 +12,9 @@ export const START_NEW_ROUND="START_NEW_ROUND";
 
 //TYPE OF ACTION WHEN PAGE IS REFRESHED
 export const REFRESH_PAGE = "REFRESH_PAGE";
+
+export const HIDE_CARDS = "HIDE_CARDS";
+
+export const REVEAL_CARD = "REVEAL_CARD";
+
+export const FORFEIT = "FORFEIT";

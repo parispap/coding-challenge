@@ -18,7 +18,7 @@ class GamePage extends Component {
         <div className={styles.deck_container}><img width="60px" src={deck} alt=""/></div>
 
         <div><GameBoard/></div>
-
+      
         <div className={styles.round_stats}>
           <RoundStats/>
         </div>
@@ -37,6 +37,7 @@ class GamePage extends Component {
 const mapStateToProps = (state) => {
   return {
     ...state,
+    game_started:state.UserInfo.game_started
   };
 };
 
