@@ -33,3 +33,21 @@
   bottom: 80px;
   padding: 20px;
 }
+
+.event_viewer {
+  position: absolute;
+  width:300px;
+  bottom:0px;
+  left:20px;
+  height:300px;
+  border:1px solid black;
+  text-align:left;
+  padding: 20px;
+  overflow-y: scroll;
+  background-color:white;
+  font-size:12px;
+}
+
+.event_viewer>span {
+  font-size:larger;
+}

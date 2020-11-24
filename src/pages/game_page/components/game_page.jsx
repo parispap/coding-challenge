@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import styles from "./styles/game_page.module.css";
 import RoundStats from "./round_stats";
 import GameBoard from "./game_board";
+import EventViewer from "./EventViewer";
 
 // USE A CLASS TO TAKE ADVANTAGE OF REACTS LIFECYCLE METHODS
 class GamePage extends Component {
@@ -32,6 +33,12 @@ class GamePage extends Component {
 
         <div className={styles.bet_buttons}>
           <PlaceBetButton />
+        </div>
+        
+        <div className={styles.event_viewer}>
+          <span>Event Viewer</span>
+          <hr/>
+          <EventViewer/>
         </div>
       </div>
     );

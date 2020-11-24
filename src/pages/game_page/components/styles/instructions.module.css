@@ -1,6 +1,9 @@
+  .modal {
+    overflow-y: scroll;
+  }
+
   .modal > .header {
     width: 100%;
-    border-bottom: 1px solid gray;
     font-size: 18px;
     text-align: center;
     padding: 5px;
@@ -8,6 +11,11 @@
   .modal > .content {
     width: 100%;
     padding: 10px 5px;
+  }
+
+  .content>h3 {
+    text-align:center;
+    margin-bottom:50px;
   }
   .modal > .actions {
     width: 100%;
@@ -35,3 +43,26 @@
       
       color:white
   }
+
+  .how_to_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how_to_container>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+
+  }
+
+  .how_to_container>div p {
+    flex-basis:40%;
+  }
+
+  .how_to_container>div img {
+    flex-basis:40%;
+  }
+  
+  

@@ -24,6 +24,10 @@ body {
   
 }
 
+#logo {
+  padding: 10px;
+}
+
 h1 {
   font-size:48px;
 }
@@ -44,6 +48,21 @@ h5 {
   font-size:20px
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4em;
+}
+
+p {
+  font-size: 16px;
+
+}
+
+h1,h2,h3,h4,h5,button,a {
+  font-family:'Poppins', sans-serif;
+}
+
+
 /* GLOBAL BUTTON STYLES */
 button {
   margin-top:20px;
@@ -58,4 +77,8 @@ button {
 
 button:hover {
   background-color: #5C223C;
+}
+
+.popup-overlay {
+  overflow: scroll;
 }

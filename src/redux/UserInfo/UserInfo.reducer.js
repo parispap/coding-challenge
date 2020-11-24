@@ -37,6 +37,7 @@ const InitialState = {
   winning_pool: 0,
   game_started: false,
   game_running: false,
+  event_log:[],
   cards: {
     shuffled: false,
     flipped: false,
@@ -58,7 +59,9 @@ if (sessionStorage.getItem("user_session")) {
 //DECLARE THE REDUCER FUNCTION. IT WILL ACCEPT ACTION ARGUMENTS AND RETURN A NEW STATE ACCORDINGLY.
 const reducer = (state = InitialState, action) => {
   //SWITCH SATTEMENT FOR DIFFERENT TYPE OF ACTIONS
+  let current_event_log = state.event_log;
   switch (action.type) {
+    
     // IF USER LOGS OUT
     case LOG_OUT:
       if (sessionStorage.getItem("user_session")) {
@@ -108,29 +111,40 @@ const reducer = (state = InitialState, action) => {
           "Your Balance funds are not sufficient. Please try again with a new session"
         );
         sessionStorage.clear();
+
         return {
           ...state,
           isLoggedIn: false,
           Balance: 50000,
           game_round: 0,
           game_started: false,
+          
         };
       }
+
+      
+      current_event_log.push(`User Started a new Round with a fixed bet of €${state.fixed_bet}`);
+
       return {
         ...state,
         Balance: state.Balance - state.fixed_bet,
         game_started: true,
+        event_log:current_event_log,
         cards: {
           ...state.cards,
           card_properties: action.payload,
         },
       };
-
+      
     // IF USER CHOOSE TO PLAY INSTEAD OF FORFEIT
     case HIDE_CARDS:
+      
+      current_event_log.push(`User chose to play this round. Round ${state.game_round+1} starts`);
+
       return {
         ...state,
         game_running: true,
+        event_log:current_event_log,
         game_round: state.game_round + 1,
         cards: {
           ...state.cards,
@@ -144,6 +158,7 @@ const reducer = (state = InitialState, action) => {
     // IF USER CLICKS ON A HIDDEN CARD TO REVEAL IT
     case REVEAL_CARD:
       if (action.payload > 0) {
+        current_event_log.push(`${state.Nickname} wins! €${action.payload * state.game_round} has been added to the winning pool`)
         alert(
           `Congratulations €${
             action.payload * state.game_round
@@ -153,12 +168,15 @@ const reducer = (state = InitialState, action) => {
           ...state,
           game_running: false,
           winning_pool: state.winning_pool + state.game_round * action.payload,
+          event_log:current_event_log,
           cards: {
             ...state.cards,
             flipped: false,
+            
           },
         };
       } else {
+        current_event_log.push(`${state.Nickname} revealed the losing card. Winning pool is cleared`)
         alert("Oops! You lost your winning pool...");
 
         return {
@@ -167,6 +185,7 @@ const reducer = (state = InitialState, action) => {
           winning_pool: 0,
           game_round: 0,
           game_started: false,
+          event_log:current_event_log,
           cards: {
             ...state.cards,
             flipped: false,
@@ -181,12 +200,19 @@ const reducer = (state = InitialState, action) => {
     // IF USER CHOOSES TO FORFEIT
     case FORFEIT:
       if (state.game_round === 0) {
-        alert("You can forfeit, no round has been played!");
-        return state;
+
+        alert("You can not forfeit, no round has been played!");
+        current_event_log.push(`${state.Nickname} tried to forfeit but no round has been played yet.`)
+
+        return {
+          ...state,
+        event_log:current_event_log,
+        }
       } else {
         alert(
           `Well Done! €${state.winning_pool} has been added to your Balance!`
         );
+        current_event_log.push(`${state.Nickname} forfeited. €${state.winning_pool} has been added to his balance.`)
 
         return {
           ...state,
@@ -195,6 +221,7 @@ const reducer = (state = InitialState, action) => {
           game_round: 0,
           game_started: false,
           game_running: false,
+          event_log:current_event_log,
           cards: {
             ...state.cards,
             flipped: false,
