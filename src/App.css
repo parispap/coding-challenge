@@ -1,3 +1,5 @@
+/* APPLY GLOBAL STYLES TO WEB APPLICATION */
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +13,8 @@ body {
   margin: 0;
   height: 100%;
 }
+
+
 .App {
   text-align: center;
   background-color:green;
@@ -40,6 +44,7 @@ h5 {
   font-size:20px
 }
 
+/* GLOBAL BUTTON STYLES */
 button {
   margin-top:20px;
   padding: 10px 16px;

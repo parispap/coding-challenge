@@ -1,19 +1,19 @@
+/* ROUND STATS COMPONENT CSS FILE */
 .flex_container {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-bottom: none;
-    background-color: #5f2175;
-    color:white;
-    
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-bottom: none;
+  background-color: #5f2175;
+  color: white;
 }
 
 .flex_container > span {
-    display:block;
-    padding: 10px;
-    border-bottom:1px solid black;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid black;
 }
 
 .flex_container > span:last-child {
-    background-color:#5f2175
+  background-color: #5f2175;
 }

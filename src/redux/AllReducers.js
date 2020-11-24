@@ -1,13 +1,12 @@
 //Import combineReducers module to combine all the reducers from our Redux Store to one root reducer
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import UserInfoReducer from './UserInfo/UserInfo.reducer';
+//IMPORT USER INFO REDUCER
+import UserInfoReducer from "./UserInfo/UserInfo.reducer";
 
-
+//COMBINE ALL REDUX REDUCERS (CURRENTLY ONLY USERINFO)
 const AllReducers = combineReducers({
-
-    UserInfo: UserInfoReducer,
-
+  UserInfo: UserInfoReducer,
 });
 
 export default AllReducers;

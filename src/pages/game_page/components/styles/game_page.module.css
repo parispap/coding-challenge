@@ -1,46 +1,35 @@
-.container {
-    /* width:100%;
-    height: 800px;
-    max-height: 800px; */
-    position: relative;
-   height: 80%;
+/* Game Page COMPONENT MODULE CSS FILE */
 
-   
-   
-   
+.container {
+  position: relative;
+  height: 80%;
 }
 
 .user_panel {
-    position: absolute;
-    bottom:0px;
-    right: 10%;
-    padding: 20px;
-    
+  position: absolute;
+  bottom: 0px;
+  right: 10%;
+  padding: 20px;
 }
 
 .bet_buttons {
-    position: absolute;
-    bottom: 0px;
-    padding: 20px;
-    right:40%;
-    width:20%;
-    min-width: 200px;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  right: 40%;
+  width: 20%;
+  min-width: 200px;
 }
 
 .bet_buttons button {
-    padding:50px;
-    border-radius: 50%;
-    color:white;
-    
+  padding: 50px;
+  border-radius: 50%;
+  color: white;
 }
-
-
 
 .round_stats {
-    position: absolute;
-    right:10%;
-    bottom: 80px;
-    padding: 20px;
+  position: absolute;
+  right: 10%;
+  bottom: 80px;
+  padding: 20px;
 }
-
-

@@ -1,28 +1,25 @@
-import React from 'react';
-import {save_user} from '../../../redux/UserInfo/UserInfo.actions';
+//INPUT NICKNAME COMPONENT
+import React from "react";
+import { save_user } from "../../../redux/UserInfo/UserInfo.actions";
 
 //Import Connect component from react-redux
-import {connect} from 'react-redux';
+import { connect } from "react-redux";
 
-
+//NICKNAME COMPONENT
 const InputNickname = (props) => {
-    return(
-        <div>
-            <input onChange={(e)=> props.save_user(e)} type="text" name="Nickname"/>
-        </div>
-    )
-}
+  return (
+    <div>
+      <input onChange={(e) => props.save_user(e)} type="text" name="Nickname" />
+    </div>
+  );
+};
 
-const mapDispatchToProps = dispatch => {
-    return {
-        save_user: (e)=> dispatch(save_user(e.target.value))
-    }
-}
+//DISPATCH FUNCTION TO REPORT A USER ACTION TO REDUX
+const mapDispatchToProps = (dispatch) => {
+  return {
+    save_user: (e) => dispatch(save_user(e.target.value)),
+  };
+};
 
-const mapStateToProps = state => {
-    return {
-        name: state.UserInfo.nickname,
-        isLoggedIn:state.isLoggedin
-    }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(InputNickname);
+//CONNECT COMPONENT TO REDUX
+export default connect(null, mapDispatchToProps)(InputNickname);

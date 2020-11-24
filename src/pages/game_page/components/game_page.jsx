@@ -1,3 +1,4 @@
+// MAIN COMPONENT FOR GAME PAGE
 import React, { Component } from "react";
 import UsersPanel from "./users_panel";
 import PlaceBetButton from "./PlaceBetButton";
@@ -5,16 +6,19 @@ import { connect } from "react-redux";
 import styles from "./styles/game_page.module.css";
 import RoundStats from "./round_stats";
 import GameBoard from "./game_board";
+
+// USE A CLASS TO TAKE ADVANTAGE OF REACTS LIFECYCLE METHODS
 class GamePage extends Component {
+
+  //SAVE USER INFO AT SESSION AT EVERY UPDATE (IN ORDER TO KEEP BALANCE INTACT)
   componentDidUpdate() {
     sessionStorage.setItem("user_session", JSON.stringify(this.props.UserInfo));
   }
 
+  
   render() {
     return (
       <div className={styles.container}>
-        
-
         <div>
           <GameBoard />
         </div>
@@ -29,17 +33,12 @@ class GamePage extends Component {
         <div className={styles.bet_buttons}>
           <PlaceBetButton />
         </div>
-
-        
-
-      
-
-
       </div>
     );
   }
 }
 
+//REDUX MAP STATE TO PROPS FUNCTION
 const mapStateToProps = (state) => {
   return {
     ...state,

@@ -1,23 +1,22 @@
+/* USERS PANEL COMPONENT CSS FILE */
 .flex_container {
-    display: flex;
-    border:none;
-    border-right: none;
-    background-color: #5f2175;
-    color:white;
-    
+  display: flex;
+  border: none;
+  border-right: none;
+  background-color: #5f2175;
+  color: white;
 }
 
 .flex_container > span {
-    display:block;
-    padding: 10px;
-    border-right:1px solid black;
+  display: block;
+  padding: 10px;
+  border-right: 1px solid black;
 }
 
 .flex_container a {
-    display:block;
-    background-color: #5f2175;
-    border-color: darkgrey;
-    border:none;
-    color:wheat
-    
+  display: block;
+  background-color: #5f2175;
+  border-color: darkgrey;
+  border: none;
+  color: wheat;
 }

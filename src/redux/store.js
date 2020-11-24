@@ -1,6 +1,5 @@
 import { createStore } from 'redux';
 import AllReducers from './AllReducers';
-
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
