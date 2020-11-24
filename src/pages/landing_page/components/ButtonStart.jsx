@@ -1,5 +1,6 @@
 import React from 'react';
 import {log_in_user} from '../../../redux/UserInfo/UserInfo.actions';
+import styles from './styles/ButtonStart.module.css'
 
 //Import Connect component from react-redux
 import {connect} from 'react-redux';

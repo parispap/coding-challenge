@@ -1,5 +1,5 @@
 import "./App.css";
-import logo from "./assets/images/logo.jpg";
+import logo from "./assets/images/logo.png";
 import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import React, { Component } from "react";

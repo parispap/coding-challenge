@@ -12,7 +12,7 @@ const UsersPanel = (props) => {
         <div className={styles.flex_container}>
           
           <span>{props.Nickname}</span>
-          <span>Round: {props.game_round}</span>
+          
           <span>Balance: {props.Balance}</span>
           <span>
             <Link to={{pathname:"/"}} onClick={()=> props.log_out_user()}>Logout</Link>

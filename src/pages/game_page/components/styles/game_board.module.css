@@ -1,13 +1,13 @@
 .board_container {
 position: relative;
 width:100%;
-height: 100%;    
+height: 80%;    
 }
 
 .inner_board_container {
 display:flex;
 position: absolute;
-top:100px;
+top:200px;
 justify-content: center;
 width:100%;
 height: 100%;
@@ -17,3 +17,10 @@ height: 100%;
     /* padding: 10px; */
     
 }
+
+.button_row>button {
+
+    margin-right:10px;
+    
+}
+

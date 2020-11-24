@@ -8,8 +8,8 @@ import {
   REVEAL_CARD,
   FORFEIT
 } from "./UserInfo.types";
-import card_win from "../../assets/images/card_front.jpg";
-import card_lose from "../../assets/images/lose_card.jpg";
+import card_win from "../../assets/images/card_front.png";
+import card_lose from "../../assets/images/lose_card.png";
 
 
 //ACTION TO BE EXECUTED WHEN USER LOGS IN
@@ -36,6 +36,7 @@ export const save_user = (name) => {
 
 //ACTION TO BE EXECUTED WHEN A NEW ROUNDS STARTS
 export const start_new_round = () => {
+  
   const type_array = ["win", "lose", "win", "win"];
 const values = [+25, -25, +25, +25];
 const card_face = [card_win, card_lose, card_win, card_win];
@@ -108,6 +109,6 @@ export const reveal_card = (card_value) => {
 export const forfeit = () => {
   return {
     type:FORFEIT,
-    
+
   }
 }

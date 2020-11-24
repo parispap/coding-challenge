@@ -3,7 +3,9 @@
     height: 800px;
     max-height: 800px; */
     position: relative;
-   height: 700px;
+   height: 80%;
+
+   
    
    
 }
@@ -11,7 +13,7 @@
 .user_panel {
     position: absolute;
     bottom:0px;
-    right: 0px;
+    right: 10%;
     padding: 20px;
     
 }
@@ -19,28 +21,26 @@
 .bet_buttons {
     position: absolute;
     bottom: 0px;
-    padding: 0px;
-    right:400px;
+    padding: 20px;
+    right:40%;
+    width:20%;
+    min-width: 200px;
 }
 
 .bet_buttons button {
-    padding:30px
+    padding:50px;
+    border-radius: 50%;
+    color:white;
+    
 }
 
-.deck_container {
-    /* position: relative; */
-}
 
-.deck_container img {
-    position: absolute;
-    top:0;
-    right: 100px;
-
-}
 
 .round_stats {
     position: absolute;
-    right:0px;
+    right:10%;
     bottom: 80px;
     padding: 20px;
 }
+
+

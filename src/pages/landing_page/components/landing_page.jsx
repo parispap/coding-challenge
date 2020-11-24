@@ -1,6 +1,7 @@
 import React from 'react';
 import InputNickname from './input_nickname';
 import ButtonStart from './ButtonStart';
+import styles from './styles/landing_page.module.css';
 
 
 
@@ -9,7 +10,7 @@ const LandingPage =()=> {
 
 
     return(
-        <div>
+        <div className={styles.landing_container}>
 
             <div>
                 <h1>Welcome to our brand new gaming house</h1>

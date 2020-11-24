@@ -1,8 +1,8 @@
 .flex_container {
     display: flex;
-    border: 1px solid black;
+    border:none;
     border-right: none;
-    background-color: darkgrey;
+    background-color: #5f2175;
     color:white;
     
 }
@@ -15,9 +15,9 @@
 
 .flex_container a {
     display:block;
-    background-color: darkgrey;
+    background-color: #5f2175;
     border-color: darkgrey;
     border:none;
-    color:blue;
+    color:wheat
     
 }

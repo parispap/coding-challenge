@@ -25,6 +25,7 @@ const mapStateToProps = (state) => {
         fixed_bet:state.UserInfo.fixed_bet,
         game_started:state.UserInfo.game_started,
         game_running:state.UserInfo.game_running,
+        Balance:state.UserInfo.Balance
         
     };
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import styles from './styles/round_stats.module.css';
+import PopInstructions from './insructions'
 
 const RoundStats = (props) => {
   return (
@@ -11,6 +12,7 @@ const RoundStats = (props) => {
           
           <span>Round: {props.game_round}</span>
           <span>Wining Pool: {props.winning_pool}</span>
+          <span><PopInstructions/></span>
   
         </div>
       
