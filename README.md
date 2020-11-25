@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Download or clone this repo. In order to use it Node must be installed on your system. When node is installed, open a terminal in projects root folder and run:
+
+npm install
+
+The above command will install all the necessary node modules. When install is finished, run:
+
+npm start
+
 ## Available Scripts
 
 In the project directory, you can run:
