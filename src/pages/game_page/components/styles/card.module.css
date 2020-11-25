@@ -4,6 +4,7 @@
 .card_container {
   width: 200px;
   height: 300px;
+  flex-basis: 25%;
   perspective: 800px;
   background-color: green;
 }
@@ -23,17 +24,23 @@
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  background-size:contain;
+  background-repeat:no-repeat;
 }
 
 /* INITIALLY ROTATE CARD 180 DEGREES */
 .card_back {
+  
   transform: rotateY(180deg);
   background: url("../../../../assets/images/card.png");
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
 /* IF USER CHOOSES TO PLAY HIDE CARDS */
 .is_flipped {
   transform: rotateY(180deg);
+  background-size:contain;
 }
 
 /* SHUFFLE ANIMATION WHEN PLAY IS CLICKED */
@@ -56,4 +63,16 @@
     position: absolute;
     pointer-events: unset;
   }
+}
+
+
+@media screen and (max-width:900px) {
+  .card_container {
+    width: 80px;
+    height: 150px;
+    flex-basis: 25%;
+    perspective: 800px;
+    background-color: green;
+  }
+  
 }

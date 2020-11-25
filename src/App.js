@@ -14,7 +14,6 @@ import { connect } from "react-redux";
 
 //IMPORT REACT AND COMPONENT
 import React, { Component } from "react";
-import { refresh_page } from "./redux/UserInfo/UserInfo.actions";
 
 //IMPORT LANDING PAGE COMPONENT
 import LandingPage from "./pages/landing_page/components/landing_page";
@@ -36,7 +35,7 @@ class App extends Component {
       <Router>
         <div className="App">
           {/* RENDER LOGO */}
-          <div>
+          <div id="logo">
             <img width="200px" height="140px" src={logo} alt="logo" />
           </div>
 
