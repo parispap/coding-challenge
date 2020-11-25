@@ -21,6 +21,7 @@ import {
 // winning_pool: THE AMOUNT THAT USER WINNED FROM ALL ROUNDS - INT
 // game_started: A BOOLEAN TO SHOW IF USER HAS PLACED A BET - BOOL
 // game_running: A BOOLEAN TO SHOW IF USER CHOOSES TO PLAY AND GUESS THE CARD - BOOL
+// event_log: AN ARRAY WITH ALL THE ACTIONS THAT USER DID
 // cards: AN OBJECT WITH THE FOLLOWING PROPERTIES:
 // shuffled: A BOOLEAN THAT SHOWS IF THE CARDS ARE SHUFFLED BEFORE USER GETS TO CHOOSE ONE - BOOL
 // flipped: A VARIABLE THAT IS USED TO FLIP THE CARDS TO FRONT AND BACK SIDE - STRING
@@ -60,6 +61,7 @@ if (sessionStorage.getItem("user_session")) {
 const reducer = (state = InitialState, action) => {
   //SWITCH SATTEMENT FOR DIFFERENT TYPE OF ACTIONS
   let current_event_log = state.event_log;
+  
   switch (action.type) {
     
     // IF USER LOGS OUT
@@ -123,7 +125,7 @@ const reducer = (state = InitialState, action) => {
       }
 
       
-      current_event_log.push(`User Started a new Round with a fixed bet of €${state.fixed_bet}`);
+      current_event_log.push(`${state.Nickname} Started a new Round with a fixed bet of €${state.fixed_bet}`);
 
       return {
         ...state,
@@ -139,7 +141,7 @@ const reducer = (state = InitialState, action) => {
     // IF USER CHOOSE TO PLAY INSTEAD OF FORFEIT
     case HIDE_CARDS:
       
-      current_event_log.push(`User chose to play this round. Round ${state.game_round+1} starts`);
+      current_event_log.push(`${state.Nickname} chose to play this round. Round ${state.game_round+1} starts`);
 
       return {
         ...state,

@@ -20,26 +20,33 @@ class GamePage extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <div>
+        <div className={styles.gameboard}>
           <GameBoard />
         </div>
 
+
+        <div className={styles.bet_buttons}>
+          <PlaceBetButton />
+        </div>
+        
+
+        <div className={styles.bottom_panel}>
+         <div className={styles.event_viewer}>
+          <span>Event Viewer</span>
+          <hr/>
+          <EventViewer/>
+        </div>
+
+        <div>
         <div className={styles.round_stats}>
           <RoundStats />
         </div>
         <div className={styles.user_panel}>
           <UsersPanel />
         </div>
+        </div>
+        </div>
 
-        <div className={styles.bet_buttons}>
-          <PlaceBetButton />
-        </div>
-        
-        <div className={styles.event_viewer}>
-          <span>Event Viewer</span>
-          <hr/>
-          <EventViewer/>
-        </div>
       </div>
     );
   }

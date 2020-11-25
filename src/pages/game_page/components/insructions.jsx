@@ -5,13 +5,13 @@ import PlaceBetImage from "../../../assets/images/place_bet.jpg";
 import BoardPic from "../../../assets/images/board.jpg";
 import PlayForfeitPics from "../../../assets/images/play_forfeit.jpg";
 import HiddenCards from "../../../assets/images/hidden_card.jpg";
-import LoseCard from "../../../assets/images/lose_card.png";
+import LoseCard from "../../../assets/images/lose_card_instructions.jpg";
 
 import styles from "./styles/instructions.module.css";
 
 const PopInstructions = () => {
   return (
-    <Popup trigger={<a className={styles.button}> How it Works </a>} modal open>
+    <Popup trigger={<a href="#" className={styles.button}> How to Play </a>} modal>
       {(close) => (
         <div className={styles.modal}>
           <div className={styles.header}> </div>
@@ -64,7 +64,7 @@ const PopInstructions = () => {
                   pool and he has to pay again to satrt a new game.
                 </p>
 
-                <img width="" height="" src={LoseCard} alt="lose" />
+                <img src={LoseCard} alt="lose" />
               </div>
 
               <div>
